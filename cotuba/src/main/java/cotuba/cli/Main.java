@@ -25,7 +25,7 @@ public class Main {
     modoVerboso = opcoesCLI.isModoVerboso();
 
     var cotuba = new Cotuba();
-    cotuba.executa(formato, diretorioDosMD, arquivoDeSaida);
+    cotuba.executa(opcoesCLI);
 
     System.out.println("Arquivo gerado com sucesso: " + arquivoDeSaida);
 
