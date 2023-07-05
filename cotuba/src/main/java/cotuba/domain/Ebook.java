@@ -1,16 +1,14 @@
 package cotuba.domain;
 
-import cotuba.domain.Capitulo;
-
 import java.nio.file.Path;
 import java.util.List;
 public class Ebook {
 
-    public String getFormato() {
+    public FormatoEbook getFormato() {
         return formato;
     }
 
-    public void setFormato(String formato) {
+    public void setFormato(FormatoEbook formato) {
         this.formato = formato;
     }
 
@@ -30,7 +28,7 @@ public class Ebook {
         this.capitulos = capitulos;
     }
 
-    private String formato;
+    private FormatoEbook formato;
 
     private Path arquivoDeSaida;
 

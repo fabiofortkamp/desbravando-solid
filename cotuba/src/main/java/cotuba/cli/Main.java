@@ -2,6 +2,7 @@ package cotuba.cli;
 
 import cotuba.application.Cotuba;
 import cotuba.cli.LeitorOpcoesCLI;
+import cotuba.domain.FormatoEbook;
 
 import java.nio.file.Path;
 
@@ -11,7 +12,7 @@ public class Main {
 
 
     Path diretorioDosMD;
-    String formato;
+    FormatoEbook formato;
     Path arquivoDeSaida;
     boolean modoVerboso = false;
 
