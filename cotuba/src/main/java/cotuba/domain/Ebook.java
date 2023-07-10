@@ -1,9 +1,12 @@
 package cotuba.domain;
 
+import cotuba.plugin.EbookSoParaLeitura;
+
 import java.nio.file.Path;
 import java.util.List;
-public class Ebook {
+public class Ebook implements EbookSoParaLeitura {
 
+    @Override
     public FormatoEbook getFormato() {
         return formato;
     }
@@ -12,6 +15,7 @@ public class Ebook {
         this.formato = formato;
     }
 
+    @Override
     public Path getArquivoDeSaida() {
         return arquivoDeSaida;
     }
@@ -20,6 +24,7 @@ public class Ebook {
         this.arquivoDeSaida = arquivoDeSaida;
     }
 
+    @Override
     public List<Capitulo> getCapitulos() {
         return capitulos;
     }
