@@ -9,6 +9,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.text.Normalizer;
+import java.util.Iterator;
 import java.util.Map;
 
 public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
@@ -36,10 +37,11 @@ public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
             }
         }
 
-        for (Map.Entry<String, Integer> contagem : contagemDePalavras.entrySet()) {
-            String palavra = contagem.getKey();
-            Integer ocorrencias = contagem.getValue();
-            System.out.println(palavra + ": " + ocorrencias);
+        Iterator<ContagemDePalavras.Contagem> iterator =
+                contagemDePalavras.iterator();
+
+        for (ContagemDePalavras.Contagem contagem : contagemDePalavras) {
+            System.out.println(contagem.palavra() + ": " + contagem.ocorrencias());
         }
 
 
