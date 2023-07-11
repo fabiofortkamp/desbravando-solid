@@ -6,7 +6,7 @@ import java.util.ServiceLoader;
 
 public interface AoFinalizarGeracao {
 
-    static void gerou(EbookSoParaLeitura ebook) {
+    static void gerou(Ebook ebook) {
         ServiceLoader.load(AoFinalizarGeracao.class)
                 .forEach(
                         plugin -> {
@@ -16,5 +16,5 @@ public interface AoFinalizarGeracao {
     }
 
 
-    void aposGeracao(EbookSoParaLeitura ebook);
+    void aposGeracao(Ebook ebook);
 }
